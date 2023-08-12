@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Papyrus" Height="450" Width="800">
     <Grid>
         <Menu VerticalAlignment="Top">
             <MenuItem Header="Arquivo">
@@ -29,6 +29,8 @@
                 <MenuItem Header="Azul" Click="ChangeTextColorToBlue"/>
             </MenuItem>
         </Menu>
-        <TextBox Name="textArea" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,30,0,0" PreviewMouseWheel="OnTextAreaMouseWheel"/>
+        <RichTextBox Name="textArea" AcceptsReturn="True" AcceptsTab="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,30,0,0" PreviewMouseWheel="OnTextAreaMouseWheel"/>
+
+
     </Grid>
 </Window>
