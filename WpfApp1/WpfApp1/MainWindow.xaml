@@ -10,8 +10,8 @@
         <Menu VerticalAlignment="Top">
             <MenuItem Header="Arquivo">
                 <MenuItem Header="Novo" />
-                <MenuItem Header="Abrir" />
-                <MenuItem Header="Salvar" />
+                <MenuItem Header="Abrir" Click="OnOpenClick" />
+                <MenuItem Header="Salvar" Click="OnSaveClick" />
                 <MenuItem Header="Sair" Click="OnExitClick" />
             </MenuItem>
             <MenuItem Header="Editar">
@@ -22,6 +22,11 @@
                 <MenuItem Header="Copiar" Command="ApplicationCommands.Copy" CommandTarget="{Binding ElementName=textArea}" />
                 <MenuItem Header="Colar" Command="ApplicationCommands.Paste" CommandTarget="{Binding ElementName=textArea}" />
                 <MenuItem Header="Deletar" Command="ApplicationCommands.Delete" CommandTarget="{Binding ElementName=textArea}" />
+            </MenuItem>
+            <MenuItem Header="Cor">
+                <MenuItem Header="Vermelho" Click="ChangeTextColorToRed"/>
+                <MenuItem Header="Verde" Click="ChangeTextColorToGreen"/>
+                <MenuItem Header="Azul" Click="ChangeTextColorToBlue"/>
             </MenuItem>
         </Menu>
         <TextBox Name="textArea" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,30,0,0" PreviewMouseWheel="OnTextAreaMouseWheel"/>
